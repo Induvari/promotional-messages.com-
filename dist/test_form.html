@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Forms</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="toggle-container">
+        <button id="personalBtn" class="toggle-button">Personal Use</button>
+        <button id="businessBtn" class="toggle-button">Business Use</button>
+    </div>
+
+    <div id="personalForm" class="form-container">
+        <h2>Personal Use Form</h2>
+        <form>
+            <!-- Personal use form fields here -->
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <input type="text" placeholder="Phone">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div id="businessForm" class="form-container" style="display: none;">
+        <h2>Business Use Form</h2>
+        <form>
+            <!-- Business use form fields here -->
+            <input type="text" placeholder="Company Name">
+            <input type="email" placeholder="Business Email">
+            <input type="text" placeholder="Contact Number">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

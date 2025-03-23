@@ -1,0 +1,167 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+}
+
+/* Left Section */
+.left-section {
+    width: 50%;
+    text-align: center;
+    padding: 40px;
+}
+
+.left-section h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.left-section p {
+    font-size: 16px;
+    color: #555;
+}
+
+.logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.logos img {
+    width: 80px;
+    height: auto;
+}
+
+/* Right Section */
+.right-section {
+    width: 50%;
+    background: #f7f7f7;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    padding: 12px 20px;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #888;
+    font-weight: bold;
+}
+
+.tab-btn.active {
+    color: #0cc0df;
+    border-bottom: 3px solid #0cc0df;
+}
+
+/* Forms */
+.form-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px; /* Fixed height for the form container */
+}
+
+.form-content input {
+    width: 100%;
+    max-width: 350px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    border-color: #0cc0df;
+}
+
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.checkbox-container input {
+    margin-right: 8px;
+}
+
+.signup-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+
+/* Buttons */
+.signup-btn, .google-btn {
+    width: 100%;
+    max-width: 350px;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.signup-btn {
+    background: #0cc0df;
+    color: white;
+    border-radius: 5px;
+}
+
+.google-btn {
+    background: #fff;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.google-btn:hover {
+    background-color: #f0f0f0;
+}
+
+/* Forgot Password */
+.forgot-password {
+    margin-top: 10px;
+}
+
+.forgot-password a {
+    color: #0cc0df;
+    text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+    }
+}

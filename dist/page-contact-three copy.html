@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Promotional Messaging</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link href="assets/libs/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="assets/libs/@iconscout/unicons/css/line.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style-startfree.css" /> 
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-section">
+            <h2>Promotional Messaging</h2>
+            <p>Trusted by 100+ industries</p>
+            <div class="logos">
+                <img src="assets/images/Blue outlined Industry logos/10.1.png" alt="Car Icon">
+                <img src="assets/images/Blue outlined Industry logos/11.1.png" alt="Heart Icon">
+                <img src="assets/images/Blue outlined Industry logos/13.1.png" alt="Graduation Cap Icon">
+                <img src="assets/images/Blue outlined Industry logos/9.1.png" alt="Building Icon">
+                <img src="assets/images/Blue outlined Industry logos/8.1.png" alt="Bicycle Icon">
+                <img src="assets/images/Blue outlined Industry logos/7.1.png" alt="Couch Icon">
+                <img src="assets/images/Blue outlined Industry logos/6.1.png" alt="Tools Icon">
+            </div>
+        </div>
+
+        <div class="right-section">
+            <div class="tabs">
+                <button class="tab-btn active" onclick="switchTab('signup')">For Personal Use</button>
+                <button class="tab-btn" onclick="switchTab('login')">For Business Use</button>
+            </div>
+
+            <!-- Personal use Form -->
+<!-- Individual User Form -->
+<form id="signup-form" class="form-content">
+    <input type="text" id="signup-name" placeholder="Full Name" required>
+    <input type="text" id="signup-contact" placeholder="Contact Number" required>
+    <input type="email" id="signup-email" placeholder="Email Address" required>
+
+    <!-- Checkbox for agreement -->
+    <label class="checkbox-container" style="text-align: justify;">
+        <input type="checkbox" id="signup-agree">
+        I hereby declare and authorize "PROMOTIONAL MESSAGES" that my email and mobile number to use for all official communications related to Promotional Messages services.
+    </label>
+
+    <button type="button" class="signup-btn" id="signup-btn" disabled>Contact Us</button>
+    <!-- Terms and Conditions and Privacy Policy links -->
+    <p style="text-align: justify; margin-top: 10px;">
+        By clicking Contact Us, you agree to our 
+        <a href="terms-and-conditions.html" target="_blank">Terms and Conditions</a> and 
+        <a href="privacy-policy.html" target="_blank">Privacy Policy</a>.
+    </p>
+    
+</form>
+
+<!-- Business Use Form -->
+<form id="login-form" class="form-content" style="display: none;">
+    <input type="text" id="login-name" placeholder="Full Name" required>
+    <input type="text" id="login-company" placeholder="Name of Company/Organisation" required>
+    <input type="email" id="login-email" placeholder="Email Address" required>
+    <input type="text" id="login-contact" placeholder="Contact Number" required>
+
+    <!-- Checkbox for agreement -->
+    <label class="checkbox-container" style="text-align: justify;">
+        <input type="checkbox" id="login-agree">
+        I hereby declare and authorize "PROMOTIONAL MESSAGES" that my email and mobile number to use for all official communications related to Promotional Messages services.
+    </label>
+
+    <button type="button" class="signup-btn" id="login-btn" disabled>Contact Us</button>
+
+    <!-- Terms and Conditions and Privacy Policy links -->
+    <p style="text-align: justify; margin-top: 10px;">
+        By clicking Contact Us, you agree to our 
+        <a href="terms-and-conditions.html" target="_blank">Terms and Conditions</a> and 
+        <a href="privacy-policy.html" target="_blank">Privacy Policy</a>.
+    </p>
+</form>
+
+<script>
+    // Enable/Disable buttons based on agreement checkbox
+    document.getElementById('signup-agree').addEventListener('change', function () {
+        document.getElementById('signup-btn').disabled = !this.checked;
+    });
+
+    document.getElementById('login-agree').addEventListener('change', function () {
+        document.getElementById('login-btn').disabled = !this.checked;
+    });
+
+    // Function to send email using mailto:
+    function sendEmail(name, contact, email, extraInfo = "") {
+        const subject = "Contact Request";
+        const body = `${name} wants to contact / get a demo. \n\nDetails:\nName: ${name}\nContact: ${contact}\nEmail: ${email}\n${extraInfo}`;
+        window.location.href = `mailto:theaimarketingx@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    }
+
+    // Event listener for individual user Contact Us button
+    document.getElementById('signup-btn').addEventListener('click', function () {
+        const name = document.getElementById('signup-name').value;
+        const contact = document.getElementById('signup-contact').value;
+        const email = document.getElementById('signup-email').value;
+
+        if (!name || !contact || !email) {
+            alert("Please fill out all fields before submitting.");
+            return;
+        }
+
+        sendEmail(name, contact, email);
+    });
+
+    // Event listener for business user Contact Us button
+    document.getElementById('login-btn').addEventListener('click', function () {
+        const name = document.getElementById('login-name').value;
+        const company = document.getElementById('login-company').value;
+        const email = document.getElementById('login-email').value;
+        const contact = document.getElementById('login-contact').value;
+
+        if (!name || !company || !email || !contact) {
+            alert("Please fill out all fields before submitting.");
+            return;
+        }
+
+        const extraInfo = `Company/Organization: ${company}`;
+        sendEmail(name, contact, email, extraInfo);
+    });
+</script>
+
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

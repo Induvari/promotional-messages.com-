@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+}
+
+.left-section, .right-section {
+    width: 50%;
+    padding: 40px;
+}
+
+.left-section {
+    background: #fff;
+    text-align: center;
+}
+
+.logos img {
+    width: 100px;
+    margin: 10px;
+}
+
+.right-section {
+    background: #eae9e9c7 !important;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    /* border: 1px solid black; */
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    border-color: #F7961C;
+}
+
+.signup-btn, .google-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.signup-btn {
+    background: #F7961C;
+    color: white;
+}
+
+.google-btn {
+    background: rgb(255, 255, 255);
+    border: 1px solid #ddd;
+    
+}
+
+.google-btn:hover {
+    background-color: #f0f0f0; /* Light grey on hover */
+}
+
+.radio-group {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.radio-group label {
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+    }
+}
+
+
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Login container */
+.login-section {
+    padding: 50px;
+    background: #ffffff;
+}
+
+/* Heading */
+h1 {
+    font-size: 30px;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Input fields */
+.login-form input {
+    width: 300px;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Login button */
+.cta-button {
+    background: #0088cc;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Button hover effect */
+.cta-button:hover {
+    background: #0073aa;
+}
+
+/* Forgot password link */
+.forgot-password {
+    margin-top: 15px;
+}
+
+.forgot-password a {
+    color: #0088cc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}

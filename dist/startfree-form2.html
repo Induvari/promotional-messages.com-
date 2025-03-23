@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="assets/css/startfree-form2-style.css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section -->
+        <div class="left-section">
+            <img src="logo.png" alt="EZTexting Logo" class="logo">
+            <h2>Trusted by 230,000+ Customers</h2>
+            <div class="brands">
+                <img src="dominos.png" alt="Domino's">
+                <img src="goodwill.png" alt="Goodwill">
+                <img src="arizona.png" alt="University of Arizona">
+                <img src="lee.png" alt="Lee & Associates">
+                <img src="anytime.png" alt="Anytime Fitness">
+                <img src="ikea.png" alt="IKEA">
+                <img src="stihl.png" alt="STIHL">
+            </div>
+        </div>
+
+        <!-- Right Section (Signup Form) -->
+        <div class="right-section">
+            <h2>Start Your Free Trial Today</h2>
+            <form id="signup-form">
+                <input type="text" placeholder="Name" required>
+                <input type="text" placeholder="Company/Organization Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="password" placeholder="Password (8 characters or more)" required>
+                
+                <!-- Country Selection -->
+                <div class="country-selection">
+                    <label>
+                        <input type="radio" name="country" value="US" checked>
+                        <img src="us.png" alt="US Flag">
+                    </label>
+                    <label>
+                        <input type="radio" name="country" value="CA">
+                        <img src="canada.png" alt="Canada Flag">
+                    </label>
+                </div>
+
+                <button type="submit" class="signup-btn">SIGN UP FOR FREE</button>
+                
+                <p class="or-text">OR</p>
+                <button type="button" class="google-signup">
+                    <img src="google.png" alt="Google Icon"> SIGN UP WITH GOOGLE
+                </button>
+
+                <p class="terms">By continuing to sign up, you agree to our <a href="#">Terms and Conditions</a>, 
+                <a href="#">Service Policy</a>, and <a href="#">Anti-Spam Policy</a>.</p>
+            </form>
+
+            <p class="login-text">Already have an account? <a href="#">Log in</a></p>
+        </div>
+    </div>
+
+    <script src="assets/js/startfree-form2.js"></script>
+</body>
+</html>
