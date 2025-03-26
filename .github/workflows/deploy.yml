@@ -1,0 +1,31 @@
+name: Deploy to DigitalOcean
+
+on:
+  push:
+    branches:
+      - main  # Change to the branch you want to deploy from
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@master
+        with:
+          host: 68.183.83.7
+          username: root
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /var/www/html/beta0/
+            rm -rf *
+            mkdir temp
+            cd temp
+            git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git .
+            mv * ../
+            cd ..
+            rm -rf temp
+            ls -la
